@@ -20,6 +20,14 @@ pipeline {
             }
         }
         
+        stage('Deploy') {
+            steps {
+                // Add deployment steps here
+                // For example, deploying to Tomcat
+                sh 'sudo cp target/your-application.war /var/lib/tomcat9/webapps/'
+            }
+        }
+        
         // Add more stages as needed
     }
 }
